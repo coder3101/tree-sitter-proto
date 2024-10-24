@@ -8,11 +8,15 @@
 // @ts-check
 
 const
-  letter = /[a-zA-Z]/,
-  decimal_digit = /[0-9]/,
-  octal_digit = /[0-7]/,
-  hex_digit = /[0-9A-Fa-f]/
+  letter = /[a-zA-Z]/;
+const decimal_digit = /[0-9]/;
+const octal_digit = /[0-7]/;
+const hex_digit = /[0-9A-Fa-f]/;
 
+/**
+ *
+ * @param {any} content
+ */
 function array_of(content) {
   return seq(
     '[',
@@ -500,20 +504,20 @@ module.exports = grammar({
           '"',
           repeat(choice(
             token.immediate(prec(1, /[^"\\]+/)),
-            $.escape_sequence
+            $.escape_sequence,
           )),
-          '"'
+          '"',
         ),
 
         seq(
-          "'",
+          '\'',
           repeat(choice(
             token.immediate(prec(1, /[^'\\]+/)),
-            $.escape_sequence
+            $.escape_sequence,
           )),
-          "'",
+          '\'',
         ),
-      )
+      ),
     ),
 
     escape_sequence: $ => token.immediate(seq(
@@ -523,8 +527,8 @@ module.exports = grammar({
         /\d{2,3}/,
         /x[0-9a-fA-F]{2,}/,
         /u[0-9a-fA-F]{4}/,
-        /U[0-9a-fA-F]{8}/
-      )
+        /U[0-9a-fA-F]{8}/,
+      ),
     )),
 
     comment: $ => token(choice(
@@ -532,8 +536,8 @@ module.exports = grammar({
       seq(
         '/*',
         /[^*]*\*+([^/*][^*]*\*+)*/,
-        '/'
-      )
-    ))
-  }
+        '/',
+      ),
+    )),
+  },
 });
