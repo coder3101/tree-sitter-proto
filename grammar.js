@@ -420,19 +420,19 @@ module.exports = grammar({
           '"',
           letter,
           optional(repeat(choice(letter, decimal_digit, '_'))),
-          '"'
+          '"',
         ),
         seq(
-          "'",
+          '\'',
           letter,
           optional(repeat(choice(letter, decimal_digit, '_'))),
-          "'"
+          '\'',
         ),
         seq(
           letter,
-          optional(repeat(choice(letter, decimal_digit, '_')))
-        )
-      )
+          optional(repeat(choice(letter, decimal_digit, '_'))),
+        ),
+      ),
     ),
     _identifier_or_string: $ => choice($.identifier, $.string),
 
