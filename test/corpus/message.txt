@@ -14,6 +14,8 @@ message Outer {
   map<int32, string> my_map = 4;
   reserved 10, 15, 20 to 30;
   reserved "foo", "bar";
+  reserved 'baz';
+  reserved foobaz;
 }
 
 --------------------------------------------------------------------------------
@@ -80,4 +82,10 @@ message Outer {
       (reserved
         (reserved_field_names
           (reserved_identifier)
+          (reserved_identifier)))
+      (reserved
+        (reserved_field_names
+          (reserved_identifier)))
+      (reserved
+        (reserved_field_names
           (reserved_identifier))))))

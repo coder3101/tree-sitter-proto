@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-proto",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Parser for proto2 and proto3 files",
   "repository": "github:tree-sitter/tree-sitter-proto",
   "license": "MIT",
@@ -46,6 +46,7 @@
   "scripts": {
     "install": "node-gyp-build",
     "lint": "eslint grammar.js",
+    "lint-fix": "eslint grammar.js --fix",
     "prestart": "tree-sitter build --wasm",
     "start": "tree-sitter playground",
     "test": "node --test bindings/node/*_test.js"
