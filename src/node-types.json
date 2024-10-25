@@ -77,6 +77,22 @@
     }
   },
   {
+    "type": "edition",
+    "named": true,
+    "fields": {
+      "year": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
+  },
+  {
     "type": "empty_statement",
     "named": true,
     "fields": {}
@@ -742,6 +758,10 @@
       "required": false,
       "types": [
         {
+          "type": "edition",
+          "named": true
+        },
+        {
           "type": "empty_statement",
           "named": true
         },
@@ -901,6 +921,10 @@
   },
   {
     "type": "double",
+    "named": false
+  },
+  {
+    "type": "edition",
     "named": false
   },
   {

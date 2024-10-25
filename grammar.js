@@ -34,7 +34,7 @@ module.exports = grammar({
     // proto = syntax { import | package | option | topLevelDef | emptyStatement }
     // topLevelDef = message | enum | service
     source_file: $ => seq(
-      optional($.syntax),
+      optional(choice($.syntax, $.edition)),
       optional(repeat(choice(
         $.import,
         $.package,
@@ -49,6 +49,8 @@ module.exports = grammar({
 
     empty_statement: _ => ';',
 
+    // edition  = "edition" "=" quote numeric quote ";"
+    edition: $ => seq('edition', '=', field('year', $.string), ';'),
     // syntax = "syntax" "=" quote "proto3" quote ";"
     syntax: $ => seq('syntax', '=', choice('"proto3"', '"proto2"'), ';'),
 

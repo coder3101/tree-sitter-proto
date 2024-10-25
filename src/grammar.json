@@ -9,8 +9,17 @@
           "type": "CHOICE",
           "members": [
             {
-              "type": "SYMBOL",
-              "name": "syntax"
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "SYMBOL",
+                  "name": "syntax"
+                },
+                {
+                  "type": "SYMBOL",
+                  "name": "edition"
+                }
+              ]
             },
             {
               "type": "BLANK"
@@ -70,6 +79,31 @@
     "empty_statement": {
       "type": "STRING",
       "value": ";"
+    },
+    "edition": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "STRING",
+          "value": "edition"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "FIELD",
+          "name": "year",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
+        },
+        {
+          "type": "STRING",
+          "value": ";"
+        }
+      ]
     },
     "syntax": {
       "type": "SEQ",
