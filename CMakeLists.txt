@@ -1,7 +1,7 @@
 cmake_minimum_required(VERSION 3.13)
 
 project(tree-sitter-proto
-        VERSION "0.1.0"
+        VERSION "0.2.0"
         DESCRIPTION "Parser for proto2 and proto3 files"
         HOMEPAGE_URL "https://github.com/coder3101/tree-sitter-proto"
         LANGUAGES C)

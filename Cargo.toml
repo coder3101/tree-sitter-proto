@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-proto"
 description = "Parser for proto2 and proto3 files"
-version = "0.1.0"
+version = "0.2.0"
 authors = ["Mohammad Ashar Khan <ashar786khan@gmail.com>"]
 license = "MIT"
 readme = "README.md"
