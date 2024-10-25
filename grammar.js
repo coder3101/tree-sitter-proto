@@ -413,17 +413,27 @@ module.exports = grammar({
       ))),
     )),
 
-    // reserved_identifier = \" letter { letter | decimalDigit | "_" } \"
-    reserved_identifier: $ => token(seq(
-      '"',
-      letter,
-      optional(repeat(choice(
-        letter,
-        decimal_digit,
-        '_',
-      ))),
-      '"',
-    )),
+    // reserved_identifier = \" | ' letter { letter | decimalDigit | "_" } ' | \"
+    reserved_identifier: $ => token(
+      choice(
+        seq(
+          '"',
+          letter,
+          optional(repeat(choice(letter, decimal_digit, '_'))),
+          '"'
+        ),
+        seq(
+          "'",
+          letter,
+          optional(repeat(choice(letter, decimal_digit, '_'))),
+          "'"
+        ),
+        seq(
+          letter,
+          optional(repeat(choice(letter, decimal_digit, '_')))
+        )
+      )
+    ),
     _identifier_or_string: $ => choice($.identifier, $.string),
 
     // fullIdent = ident { "." ident }
