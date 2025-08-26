@@ -1,7 +1,7 @@
 [package]
 name = "tree-sitter-proto"
 description = "Parser for proto2 and proto3 files"
-version = "0.2.0"
+version = "0.3.0"
 authors = ["Mohammad Ashar Khan <ashar786khan@gmail.com>"]
 license = "MIT"
 readme = "README.md"
@@ -21,7 +21,7 @@ path = "bindings/rust/lib.rs"
 tree-sitter-language = "0.1"
 
 [build-dependencies]
-cc = "1.1.22"
+cc = "1.2"
 
 [dev-dependencies]
-tree-sitter = "0.24.3"
+tree-sitter = "0.25"
