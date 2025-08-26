@@ -38,3 +38,5 @@ dist/
 *.tar.gz
 *.tgz
 *.zip
+
+.DS_Store
