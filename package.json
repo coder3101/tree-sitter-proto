@@ -1,6 +1,6 @@
 {
   "name": "tree-sitter-proto",
-  "version": "0.3.0",
+  "version": "0.4.0",
   "description": "Parser for proto2 and proto3 files",
   "repository": "github:tree-sitter/tree-sitter-proto",
   "license": "MIT",
@@ -33,7 +33,7 @@
     "eslint": "^9.12.0",
     "eslint-config-treesitter": "^1.0.2",
     "prebuildify": "^6.0.1",
-    "tree-sitter-cli": "0.25.10"
+    "tree-sitter-cli": "0.26.3"
   },
   "peerDependencies": {
     "tree-sitter": "^0.21.1"

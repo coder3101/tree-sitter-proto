@@ -10,7 +10,7 @@
     }
   ],
   "metadata": {
-    "version": "0.3.0",
+    "version": "0.4.0",
     "license": "MIT",
     "description": "Parser for proto2 and proto3 files",
     "authors": [
