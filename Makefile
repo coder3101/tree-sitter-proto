@@ -4,7 +4,7 @@ endif
 
 LANGUAGE_NAME := tree-sitter-proto
 HOMEPAGE_URL := https://github.com/coder3101/tree-sitter-proto
-VERSION := 0.3.0
+VERSION := 0.4.0
 
 # repository
 SRC_DIR := src
