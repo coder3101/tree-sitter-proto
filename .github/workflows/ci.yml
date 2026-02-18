@@ -79,4 +79,4 @@ jobs:
       - name: Set up ts_query_ls
         run: curl -fL https://github.com/ribru17/ts_query_ls/releases/latest/download/ts_query_ls-x86_64-unknown-linux-gnu.tar.gz | tar -xz
       - name: Check queries
-        run: ./ts_query_ls check -f queries/
+        run: ./ts_query_ls check -f queries/ --config '{"parser_install_directories": ["."]}'
