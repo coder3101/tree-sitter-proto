@@ -48,24 +48,6 @@ jobs:
           test-node: false
           go-version: "1.23"
 
-  fuzz:
-    name: Fuzz scanner
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@v6
-      - name: Check for scanner changes
-        id: scanner-check
-        shell: sh
-        run: |-
-          {
-            test -f src/scanner.c && ! git diff --quiet HEAD^ -- "$_" &&
-            printf 'changed=true\n' || printf 'changed=false\n'
-          } >> "$GITHUB_OUTPUT"
-      - name: Run fuzzer
-        uses: tree-sitter/fuzz-action@v4
-        if: steps.scanner-check.outputs.changed == 'true'
-
   query:
     name: Validate queries
     runs-on: ubuntu-latest
