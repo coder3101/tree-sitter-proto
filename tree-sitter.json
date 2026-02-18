@@ -5,8 +5,14 @@
       "camelcase": "Proto",
       "scope": "source.proto",
       "path": ".",
-      "file-types": null,
-      "injection-regex": "^proto$"
+      "file-types": [
+        "proto"
+      ],
+      "injection-regex": "^proto$",
+      "highlights": "queries/highlights.scm",
+      "injections": "queries/injections.scm",
+      "folds": "queries/folds.scm",
+      "indents": "queries/indents.scm"
     }
   ],
   "metadata": {
