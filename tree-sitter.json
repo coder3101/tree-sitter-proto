@@ -5,7 +5,9 @@
       "camelcase": "Proto",
       "scope": "source.proto",
       "path": ".",
-      "file-types": null,
+      "file-types": [
+        "proto"
+      ],
       "injection-regex": "^proto$"
     }
   ],
