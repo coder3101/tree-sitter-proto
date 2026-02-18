@@ -46,7 +46,10 @@ ifneq ($(filter $(shell uname),FreeBSD NetBSD DragonFly),)
 	PCLIBDIR := $(PREFIX)/libdata/pkgconfig
 endif
 
-all: lib$(LANGUAGE_NAME).a lib$(LANGUAGE_NAME).$(SOEXT) $(LANGUAGE_NAME).pc
+all: lib$(LANGUAGE_NAME).a lib$(LANGUAGE_NAME).$(SOEXT) $(LANGUAGE_NAME).pc proto.$(SOEXT)
+
+proto.$(SOEXT): lib$(LANGUAGE_NAME).$(SOEXT)
+	ln -sf $< $@
 
 lib$(LANGUAGE_NAME).a: $(OBJS)
 	$(AR) $(ARFLAGS) $@ $^
@@ -86,7 +89,7 @@ uninstall:
 		'$(DESTDIR)$(PCLIBDIR)'/$(LANGUAGE_NAME).pc
 
 clean:
-	$(RM) $(OBJS) $(LANGUAGE_NAME).pc lib$(LANGUAGE_NAME).a lib$(LANGUAGE_NAME).$(SOEXT)
+	$(RM) $(OBJS) $(LANGUAGE_NAME).pc lib$(LANGUAGE_NAME).a lib$(LANGUAGE_NAME).$(SOEXT) proto.$(SOEXT)
 
 test:
 	$(TS) test
