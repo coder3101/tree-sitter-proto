@@ -1,4 +1,45 @@
 ================================================================================
+Streaming RPC
+================================================================================
+
+syntax = "proto3";
+
+service StreamService {
+  rpc ClientStream(stream Request) returns (Response);
+  rpc ServerStream(Request) returns (stream Response);
+  rpc BidiStream(stream Request) returns (stream Response);
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax)
+  (service
+    (service_name
+      (identifier))
+    (rpc
+      (rpc_name
+        (identifier))
+      (message_or_enum_type
+        (identifier))
+      (message_or_enum_type
+        (identifier)))
+    (rpc
+      (rpc_name
+        (identifier))
+      (message_or_enum_type
+        (identifier))
+      (message_or_enum_type
+        (identifier)))
+    (rpc
+      (rpc_name
+        (identifier))
+      (message_or_enum_type
+        (identifier))
+      (message_or_enum_type
+        (identifier)))))
+
+================================================================================
 Service
 ================================================================================
 

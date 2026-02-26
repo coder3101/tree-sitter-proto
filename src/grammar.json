@@ -528,6 +528,10 @@
               },
               {
                 "type": "SYMBOL",
+                "name": "group"
+              },
+              {
+                "type": "SYMBOL",
                 "name": "empty_statement"
               }
             ]
@@ -553,6 +557,56 @@
         {
           "type": "SYMBOL",
           "name": "full_ident"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "message_body"
+        }
+      ]
+    },
+    "group": {
+      "type": "SEQ",
+      "members": [
+        {
+          "type": "CHOICE",
+          "members": [
+            {
+              "type": "CHOICE",
+              "members": [
+                {
+                  "type": "STRING",
+                  "value": "optional"
+                },
+                {
+                  "type": "STRING",
+                  "value": "required"
+                },
+                {
+                  "type": "STRING",
+                  "value": "repeated"
+                }
+              ]
+            },
+            {
+              "type": "BLANK"
+            }
+          ]
+        },
+        {
+          "type": "STRING",
+          "value": "group"
+        },
+        {
+          "type": "SYMBOL",
+          "name": "message_name"
+        },
+        {
+          "type": "STRING",
+          "value": "="
+        },
+        {
+          "type": "SYMBOL",
+          "name": "field_number"
         },
         {
           "type": "SYMBOL",
