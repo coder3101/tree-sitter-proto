@@ -54,10 +54,10 @@ module.exports = grammar({
     // syntax = "syntax" "=" quote "proto3" quote ";"
     syntax: $ => seq('syntax', '=', choice('"proto3"', '"proto2"'), ';'),
 
-    // import = "import" [ "weak" | "public" ] strLit ";"
+    // import = "import" [ "weak" | "public" | "option" ] strLit ";"
     import: $ => seq(
       'import',
-      optional(choice('weak', 'public')),
+      optional(choice('weak', 'public', 'option')),
       field('path', $.string),
       ';',
     ),
@@ -94,7 +94,9 @@ module.exports = grammar({
     // enumBody = "{" { option | enumField | emptyStatement } "}"
     // enumField = ident "=" [ "-" ] intLit [ "[" enumValueOption { ","  enumValueOption } "]" ]";"
     // enumValueOption = optionName "=" constant
+    // edition 2024: optional "export" | "local" visibility modifier
     enum: $ => seq(
+      optional(choice('export', 'local')),
       'enum',
       $.enum_name,
       $.enum_body,
@@ -135,7 +137,9 @@ module.exports = grammar({
 
     // message = "message" messageName messageBody
     // messageBody = "{" { field | enum | message | option | oneof | mapField | reserved | emptyStatement } "}"
+    // edition 2024: optional "export" | "local" visibility modifier
     message: $ => seq(
+      optional(choice('export', 'local')),
       'message',
       $.message_name,
       $.message_body,

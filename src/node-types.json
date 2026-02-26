@@ -937,6 +937,10 @@
     "named": true
   },
   {
+    "type": "export",
+    "named": false
+  },
+  {
     "type": "extend",
     "named": false
   },
@@ -982,6 +986,10 @@
   },
   {
     "type": "int64",
+    "named": false
+  },
+  {
+    "type": "local",
     "named": false
   },
   {
