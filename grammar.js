@@ -157,6 +157,7 @@ module.exports = grammar({
         $.reserved,
         $.extensions,
         $.extend,
+        $.group,
         $.empty_statement,
       )),
       '}',
@@ -167,6 +168,18 @@ module.exports = grammar({
     extend: $ => seq(
       'extend',
       $.full_ident,
+      $.message_body,
+    ),
+
+    // group = label "group" groupName "=" fieldNumber messageBody
+    // label = "required" | "optional" | "repeated"
+    // Proto2 only; deprecated but still valid.
+    group: $ => seq(
+      optional(choice('optional', 'required', 'repeated')),
+      'group',
+      $.message_name,
+      '=',
+      $.field_number,
       $.message_body,
     ),
 
