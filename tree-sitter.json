@@ -1,4 +1,5 @@
 {
+  "$schema": "https://tree-sitter.github.io/tree-sitter/assets/schemas/config.schema.json",
   "grammars": [
     {
       "name": "proto",
@@ -8,17 +9,14 @@
       "file-types": [
         "proto"
       ],
-      "injection-regex": "^proto$",
       "highlights": "queries/highlights.scm",
-      "injections": "queries/injections.scm",
-      "folds": "queries/folds.scm",
-      "indents": "queries/indents.scm"
+      "injections": "queries/injections.scm"
     }
   ],
   "metadata": {
     "version": "0.4.0",
     "license": "MIT",
-    "description": "Parser for proto2 and proto3 files",
+    "description": "Protobuf grammar for tree-sitter",
     "authors": [
       {
         "name": "Mohammad Ashar Khan",
