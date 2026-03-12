@@ -93,7 +93,8 @@
 
 (string) @string
 
-(import path: (string) @string.special.path)
+(import
+  path: (string) @string.special.path)
 
 [
   "\"proto3\""
@@ -112,6 +113,7 @@
 ] @boolean
 
 (comment) @spell
+
 (comment) @comment
 
 [
