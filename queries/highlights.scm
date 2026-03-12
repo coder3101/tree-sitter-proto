@@ -114,9 +114,6 @@
 (comment) @spell
 (comment) @comment
 
-((comment) @comment.documentation
-  (#match? @comment.documentation "^/\\*\\*[^\\*].*\\*/$"))
-
 [
   "("
   ")"

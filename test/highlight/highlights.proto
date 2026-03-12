@@ -10,10 +10,10 @@ import "google/protobuf/any.proto";
 //^ keyword.import
 //     ^ string.special.path
 
-/** A doc comment */
-//^ comment.documentation
+/** A block comment */
+//^ comment
 
-// A regular comment
+// A line comment
 //^ comment
 
 enum Status {
