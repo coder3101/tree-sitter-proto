@@ -108,8 +108,10 @@ enum FlagEnum {
 //                          ^ boolean
 }
 
-// block_lit property
+// block_lit property; extension option name variable/variable.member
 option (my.opt) = {key: "val"};
+//      ^ variable
+//         ^ variable.member
 //                 ^ property
 
 // boolean in field options
@@ -120,6 +122,8 @@ message BoolTest {
 
 // number.float
 option (my.threshold) = 3.14;
+//      ^ variable
+//         ^ variable.member
 //                      ^ number.float
 
 option optimize_for = SPEED;
