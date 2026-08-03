@@ -313,11 +313,6 @@ module.exports = grammar({
       )),
     ),
 
-    field_names: $ => seq(
-      $._identifier_or_string,
-      repeat(seq(',', $._identifier_or_string)),
-    ),
-
     reserved_field_names: $ => seq(
       $.reserved_identifier,
       repeat(seq(',', $.reserved_identifier)),
@@ -451,7 +446,6 @@ module.exports = grammar({
         ),
       ),
     ),
-    _identifier_or_string: $ => choice($.identifier, $.string),
 
     // fullIdent = ident { "." ident }
     full_ident: $ => seq(
