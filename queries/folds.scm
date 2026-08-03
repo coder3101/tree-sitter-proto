@@ -1,5 +1,7 @@
 [
   (enum)
+  (extend)
+  (group)
   (message)
   (service)
   (oneof)
