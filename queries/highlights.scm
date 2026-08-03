@@ -34,15 +34,30 @@
 ; Extension option names, e.g. option (foo.bar) = ...
 ; Also matches field/enum-value options, e.g. [(foo.bar) = ...]
 [
-  (option (full_ident (identifier) @variable))
-  (field_option (full_ident (identifier) @variable))
-  (enum_value_option (full_ident (identifier) @variable))
+  (option
+    (full_ident
+      (identifier) @variable))
+  (field_option
+    (full_ident
+      (identifier) @variable))
+  (enum_value_option
+    (full_ident
+      (identifier) @variable))
 ]
 
 [
-  (option (full_ident (identifier) (identifier) @variable.member))
-  (field_option (full_ident (identifier) (identifier) @variable.member))
-  (enum_value_option (full_ident (identifier) (identifier) @variable.member))
+  (option
+    (full_ident
+      (identifier)
+      (identifier) @variable.member))
+  (field_option
+    (full_ident
+      (identifier)
+      (identifier) @variable.member))
+  (enum_value_option
+    (full_ident
+      (identifier)
+      (identifier) @variable.member))
 ]
 
 ; Bare option names, e.g. option java_package = ...
