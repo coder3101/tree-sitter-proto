@@ -134,11 +134,11 @@ option (my.threshold) = 3.14;
 
 option optimize_for = SPEED;
 //^ keyword.directive
-//     ^ variable
+//     ^ property
 
 // string and string.escape
 option java_package = "com\nexample";
-//     ^ variable
+//     ^ property
 //                    ^ string
 //                        ^ string.escape
 

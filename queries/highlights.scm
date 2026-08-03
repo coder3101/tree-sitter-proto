@@ -48,12 +48,10 @@
 ; Bare option names, e.g. option java_package = ...
 ; Also matches the trailing segments of a parenthesized name,
 ; e.g. option (foo.bar).baz = ...
+; Matches the @property treatment of bare field_option/enum_value_option
+; names below, since these all name a field on a proto *Options message.
 (option
-  (identifier) @variable)
-
-(option
-  (identifier)
-  (identifier) @variable.member)
+  (identifier) @property)
 
 [
   "option"
