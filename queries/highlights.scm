@@ -32,14 +32,41 @@
   (identifier) @property)
 
 ; Extension option names, e.g. option (foo.bar) = ...
-(option
-  (full_ident
-    (identifier) @variable))
+; Also matches field/enum-value options, e.g. [(foo.bar) = ...]
+[
+  (option
+    (full_ident
+      (identifier) @variable))
+  (field_option
+    (full_ident
+      (identifier) @variable))
+  (enum_value_option
+    (full_ident
+      (identifier) @variable))
+]
 
+[
+  (option
+    (full_ident
+      (identifier)
+      (identifier) @variable.member))
+  (field_option
+    (full_ident
+      (identifier)
+      (identifier) @variable.member))
+  (enum_value_option
+    (full_ident
+      (identifier)
+      (identifier) @variable.member))
+]
+
+; Bare option names, e.g. option java_package = ...
+; Also matches the trailing segments of a parenthesized name,
+; e.g. option (foo.bar).baz = ...
+; Matches the @property treatment of bare field_option/enum_value_option
+; names below, since these all name a field on a proto *Options message.
 (option
-  (full_ident
-    (identifier)
-    (identifier) @variable.member))
+  (identifier) @property)
 
 [
   "option"
