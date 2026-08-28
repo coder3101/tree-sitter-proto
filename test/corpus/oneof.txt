@@ -74,3 +74,49 @@ message SampleMessage {
             (int_lit
               (decimal_lit))))
         (empty_statement)))))
+
+================================================================================
+Oneof with a group
+================================================================================
+
+syntax = "proto2";
+
+message SampleMessage {
+  oneof test_oneof {
+    string name = 4;
+    group OneofGroup = 720 {
+      optional string field = 721;
+    }
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax)
+  (message
+    (message_name
+      (identifier))
+    (message_body
+      (oneof
+        (identifier)
+        (oneof_field
+          (type)
+          (identifier)
+          (field_number
+            (int_lit
+              (decimal_lit))))
+        (empty_statement)
+        (group
+          (message_name
+            (identifier))
+          (field_number
+            (int_lit
+              (decimal_lit)))
+          (message_body
+            (field
+              (type)
+              (identifier)
+              (field_number
+                (int_lit
+                  (decimal_lit))))))))))
