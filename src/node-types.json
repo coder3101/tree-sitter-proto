@@ -12,7 +12,7 @@
           "named": true
         },
         {
-          "type": "full_ident",
+          "type": "extension_name",
           "named": true
         },
         {
@@ -221,6 +221,32 @@
           "named": true
         }
       ]
+    }
+  },
+  {
+    "type": "extension_name",
+    "named": true,
+    "fields": {
+      "name": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "full_ident",
+            "named": true
+          }
+        ]
+      },
+      "type": {
+        "multiple": false,
+        "required": false,
+        "types": [
+          {
+            "type": "full_ident",
+            "named": true
+          }
+        ]
+      }
     }
   },
   {
@@ -915,6 +941,10 @@
   },
   {
     "type": ".",
+    "named": false
+  },
+  {
+    "type": "/",
     "named": false
   },
   {

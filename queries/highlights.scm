@@ -31,6 +31,16 @@
 (block_lit
   (identifier) @property)
 
+; Extension names and Any type URLs in aggregate option values,
+; e.g. { [foo.bar]: 1 } and { [type.googleapis.com/foo.Bar]: {} }
+(extension_name
+  name: (full_ident
+    (identifier) @variable))
+
+(extension_name
+  type: (full_ident
+    (identifier) @type))
+
 ; Extension option names, e.g. option (foo.bar) = ...
 ; Also matches field/enum-value options, e.g. [(foo.bar) = ...]
 [
