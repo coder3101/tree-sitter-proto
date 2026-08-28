@@ -52,7 +52,7 @@ module.exports = grammar({
     // edition  = "edition" "=" quote numeric quote ";"
     edition: $ => seq('edition', '=', field('year', $.string), ';'),
     // syntax = "syntax" "=" quote "proto3" quote ";"
-    syntax: $ => seq('syntax', '=', choice('"proto3"', '"proto2"'), ';'),
+    syntax: $ => seq('syntax', '=', field('version', $.string), ';'),
 
     // import = "import" [ "weak" | "public" | "option" ] strLit ";"
     import: $ => seq(

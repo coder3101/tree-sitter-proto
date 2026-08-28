@@ -9,7 +9,8 @@ package foo ;
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (package
     (full_ident
       (identifier))))
@@ -25,7 +26,8 @@ package foo.bar;
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (package
     (full_ident
       (identifier)

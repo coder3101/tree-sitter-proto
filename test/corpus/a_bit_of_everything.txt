@@ -707,7 +707,8 @@ service AnotherServiceWithNoBindings {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (option
     (identifier)
     (constant

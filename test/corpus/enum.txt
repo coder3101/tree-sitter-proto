@@ -62,7 +62,8 @@ enum EnumAllowingAlias {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (enum
     (enum_name
       (identifier))

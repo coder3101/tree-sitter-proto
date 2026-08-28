@@ -11,7 +11,8 @@ extend Foo {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (extend
     (full_ident
       (identifier))
