@@ -55,3 +55,70 @@ option int_float_lit = 1.2345;
     (identifier)
     (constant
       (float_lit))))
+
+================================================================================
+Option name with an extension in the middle of the path
+================================================================================
+
+edition = "2023";
+
+option features.(pb.go).api_level = API_OPAQUE;
+option features.(pb.java).utf8_validation = VERIFY;
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (edition
+    (string))
+  (option
+    (identifier)
+    (full_ident
+      (identifier)
+      (identifier))
+    (identifier)
+    (constant
+      (full_ident
+        (identifier))))
+  (option
+    (identifier)
+    (full_ident
+      (identifier)
+      (identifier))
+    (identifier)
+    (constant
+      (full_ident
+        (identifier)))))
+
+================================================================================
+Option name with a fully-qualified extension
+================================================================================
+
+syntax = "proto2";
+
+option (.foo.bar.baz) = 1;
+option (another).thing.(.foo.bar.Thing.Nested.one) = "one";
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax)
+  (option
+    (full_ident
+      (identifier)
+      (identifier)
+      (identifier))
+    (constant
+      (int_lit
+        (decimal_lit))))
+  (option
+    (full_ident
+      (identifier))
+    (identifier)
+    (full_ident
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier)
+      (identifier))
+    (constant
+      (string))))

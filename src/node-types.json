@@ -228,9 +228,13 @@
     "named": true,
     "fields": {},
     "children": {
-      "multiple": false,
+      "multiple": true,
       "required": true,
       "types": [
+        {
+          "type": "field_options",
+          "named": true
+        },
         {
           "type": "ranges",
           "named": true
@@ -343,6 +347,10 @@
       "types": [
         {
           "type": "field_number",
+          "named": true
+        },
+        {
+          "type": "field_options",
           "named": true
         },
         {
@@ -545,6 +553,10 @@
       "types": [
         {
           "type": "empty_statement",
+          "named": true
+        },
+        {
+          "type": "group",
           "named": true
         },
         {

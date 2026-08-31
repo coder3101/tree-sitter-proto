@@ -1,0 +1,108 @@
+================================================================================
+Extension ranges
+================================================================================
+
+syntax = "proto2";
+
+message Outer {
+  extensions 100 to 199;
+  extensions 300 to 350, 500 to 550, 20000 to max;
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax)
+  (message
+    (message_name
+      (identifier))
+    (message_body
+      (extensions
+        (ranges
+          (range
+            (int_lit
+              (decimal_lit))
+            (int_lit
+              (decimal_lit)))))
+      (extensions
+        (ranges
+          (range
+            (int_lit
+              (decimal_lit))
+            (int_lit
+              (decimal_lit)))
+          (range
+            (int_lit
+              (decimal_lit))
+            (int_lit
+              (decimal_lit)))
+          (range
+            (int_lit
+              (decimal_lit))))))))
+
+================================================================================
+Extension ranges with options
+================================================================================
+
+syntax = "proto2";
+
+message Outer {
+  extensions 2 [verification = UNVERIFIED];
+  extensions 300 to 350, 500 to 550 [(label) = "jazz"];
+  extensions 10 to 100 [(extension_range_option) = { foo: 1 }];
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax)
+  (message
+    (message_name
+      (identifier))
+    (message_body
+      (extensions
+        (ranges
+          (range
+            (int_lit
+              (decimal_lit))))
+        (field_options
+          (field_option
+            (identifier)
+            (constant
+              (full_ident
+                (identifier))))))
+      (extensions
+        (ranges
+          (range
+            (int_lit
+              (decimal_lit))
+            (int_lit
+              (decimal_lit)))
+          (range
+            (int_lit
+              (decimal_lit))
+            (int_lit
+              (decimal_lit))))
+        (field_options
+          (field_option
+            (full_ident
+              (identifier))
+            (constant
+              (string)))))
+      (extensions
+        (ranges
+          (range
+            (int_lit
+              (decimal_lit))
+            (int_lit
+              (decimal_lit))))
+        (field_options
+          (field_option
+            (full_ident
+              (identifier))
+            (constant
+              (block_lit
+                (identifier)
+                (constant
+                  (int_lit
+                    (decimal_lit)))))))))))

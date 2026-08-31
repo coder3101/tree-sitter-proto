@@ -79,14 +79,19 @@ module.exports = grammar({
       ';',
     ),
 
+    // optionName = ( ident | "(" [ "." ] fullIdent ")" )
+    //              { "." ( ident | "(" [ "." ] fullIdent ")" ) }
     _option_name: $ => seq(
       choice(
         $.identifier,
-        seq('(', $.full_ident, ')'),
+        seq('(', optional('.'), $.full_ident, ')'),
       ),
       repeat(seq(
         '.',
-        $.identifier,
+        choice(
+          $.identifier,
+          seq('(', optional('.'), $.full_ident, ')'),
+        ),
       )),
     ),
 
@@ -171,7 +176,7 @@ module.exports = grammar({
       $.message_body,
     ),
 
-    // group = label "group" groupName "=" fieldNumber messageBody
+    // group = label "group" groupName "=" fieldNumber [ "[" fieldOptions "]" ] messageBody
     // label = "required" | "optional" | "repeated"
     // Proto2 only; deprecated but still valid.
     group: $ => seq(
@@ -180,6 +185,7 @@ module.exports = grammar({
       $.message_name,
       '=',
       $.field_number,
+      optional(seq('[', $.field_options, ']')),
       $.message_body,
     ),
 
@@ -220,6 +226,7 @@ module.exports = grammar({
       repeat(choice(
         $.option,
         $.oneof_field,
+        $.group,
         $.empty_statement,
       )),
       '}',
@@ -297,9 +304,11 @@ module.exports = grammar({
       ';',
     ),
 
+    // extensions = "extensions" ranges [ "[" fieldOptions "]" ] ";"
     extensions: $ => seq(
       'extensions',
       $.ranges,
+      optional(seq('[', $.field_options, ']')),
       ';',
     ),
 
