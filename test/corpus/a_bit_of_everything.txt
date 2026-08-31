@@ -796,9 +796,10 @@ service AnotherServiceWithNoBindings {
                     (identifier)
                     (constant
                       (string))))))))
-        (full_ident
-          (identifier)
-          (identifier))
+        (extension_name
+          (full_ident
+            (identifier)
+            (identifier)))
         (comment)
         (identifier)
         (constant

@@ -407,21 +407,32 @@ module.exports = grammar({
     // based on the "a bit of everything" grpc-gateway example which has
     // wildly inconsistent syntax and yet it actually parses and compiles
     // with protoc.
-    block_lit: $ => seq(
-      '{',
-      repeat(seq(
-        choice(
-          $.identifier,
-          seq('[', $.full_ident, ']'),
-        ),
-        optional(':'),
-        choice(
-          $.constant,
-          array_of($.constant),
-        ),
-        optional(choice(',', ';')),
-      )),
-      '}',
+    block_lit: $ => choice(
+      seq('{', repeat($._block_field), '}'),
+      // Text format also permits angle brackets to delimit a message value.
+      seq('<', repeat($._block_field), '>'),
+    ),
+
+    _block_field: $ => seq(
+      choice(
+        $.identifier,
+        $.extension_name,
+      ),
+      optional(':'),
+      choice(
+        $.constant,
+        array_of($.constant),
+      ),
+      optional(choice(',', ';')),
+    ),
+
+    // An extension name, or an Any type URL: [type.googleapis.com/foo.Bar]
+    extension_name: $ => seq(
+      '[',
+      optional('.'),
+      field('name', $.full_ident),
+      optional(seq('/', field('type', $.full_ident))),
+      ']',
     ),
 
     // identifier = letter { letter | decimalDigit | "_" }

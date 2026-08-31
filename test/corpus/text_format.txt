@@ -1,0 +1,137 @@
+================================================================================
+Aggregate option value with angle-bracket messages
+================================================================================
+
+syntax = "proto2";
+
+option (a) = { test:<foo:"m&m" array:1 array:2 s:<name:"yolo" id:98765>> fff:OK };
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string))
+  (option
+    (full_ident
+      (identifier))
+    (constant
+      (block_lit
+        (identifier)
+        (constant
+          (block_lit
+            (identifier)
+            (constant
+              (string))
+            (identifier)
+            (constant
+              (int_lit
+                (decimal_lit)))
+            (identifier)
+            (constant
+              (int_lit
+                (decimal_lit)))
+            (identifier)
+            (constant
+              (block_lit
+                (identifier)
+                (constant
+                  (string))
+                (identifier)
+                (constant
+                  (int_lit
+                    (decimal_lit)))))))
+        (identifier)
+        (constant
+          (full_ident
+            (identifier)))))))
+
+================================================================================
+Aggregate option value with an Any type URL
+================================================================================
+
+syntax = "proto2";
+
+option (b) = { [type.googleapis.com/foo.bar.baz.Foo]: { x: 1 } };
+option (c) = { [type.googleapis.com/buf.test.Foo] { y: 2 } };
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string))
+  (option
+    (full_ident
+      (identifier))
+    (constant
+      (block_lit
+        (extension_name
+          (full_ident
+            (identifier)
+            (identifier)
+            (identifier))
+          (full_ident
+            (identifier)
+            (identifier)
+            (identifier)
+            (identifier)))
+        (constant
+          (block_lit
+            (identifier)
+            (constant
+              (int_lit
+                (decimal_lit))))))))
+  (option
+    (full_ident
+      (identifier))
+    (constant
+      (block_lit
+        (extension_name
+          (full_ident
+            (identifier)
+            (identifier)
+            (identifier))
+          (full_ident
+            (identifier)
+            (identifier)
+            (identifier)))
+        (constant
+          (block_lit
+            (identifier)
+            (constant
+              (int_lit
+                (decimal_lit)))))))))
+
+================================================================================
+Aggregate option value with an extension name
+================================================================================
+
+syntax = "proto2";
+
+option (d) = { [foo.bar.baz]: 1, [.foo.bar.qux]: 2 };
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string))
+  (option
+    (full_ident
+      (identifier))
+    (constant
+      (block_lit
+        (extension_name
+          (full_ident
+            (identifier)
+            (identifier)
+            (identifier)))
+        (constant
+          (int_lit
+            (decimal_lit)))
+        (extension_name
+          (full_ident
+            (identifier)
+            (identifier)
+            (identifier)))
+        (constant
+          (int_lit
+            (decimal_lit)))))))
