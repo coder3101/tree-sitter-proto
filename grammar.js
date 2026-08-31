@@ -232,12 +232,14 @@ module.exports = grammar({
       '}',
     ),
 
+    // oneofField = type fieldName "=" fieldNumber [ "[" fieldOptions "]" ] ";"
     oneof_field: $ => seq(
       $.type,
       $.identifier,
       '=',
       $.field_number,
       optional(seq('[', $.field_options, ']')),
+      ';',
     ),
 
     // mapField = "map" "<" keyType "," type ">" mapName "=" fieldNumber [ "[" fieldOptions "]" ] ";"
