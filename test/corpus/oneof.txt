@@ -14,7 +14,8 @@ message SampleMessage {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (message
     (message_name
       (identifier))
@@ -54,7 +55,8 @@ message SampleMessage {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (message
     (message_name
       (identifier))
@@ -93,7 +95,8 @@ message SampleMessage {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (message
     (message_name
       (identifier))

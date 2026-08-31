@@ -12,7 +12,8 @@ message Outer {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (message
     (message_name
       (identifier))
@@ -55,7 +56,8 @@ message Outer {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (message
     (message_name
       (identifier))

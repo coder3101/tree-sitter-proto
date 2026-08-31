@@ -12,7 +12,8 @@ message Project {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (message
     (message_name
       (identifier))

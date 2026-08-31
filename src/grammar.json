@@ -117,17 +117,12 @@
           "value": "="
         },
         {
-          "type": "CHOICE",
-          "members": [
-            {
-              "type": "STRING",
-              "value": "\"proto3\""
-            },
-            {
-              "type": "STRING",
-              "value": "\"proto2\""
-            }
-          ]
+          "type": "FIELD",
+          "name": "version",
+          "content": {
+            "type": "SYMBOL",
+            "name": "string"
+          }
         },
         {
           "type": "STRING",

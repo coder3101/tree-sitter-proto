@@ -13,7 +13,8 @@ service StreamService {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (service
     (service_name
       (identifier))
@@ -64,7 +65,8 @@ service ABitOfEverythingService {
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (service
     (service_name
       (identifier))

@@ -133,10 +133,8 @@
 (import
   path: (string) @string.special.path)
 
-[
-  "\"proto3\""
-  "\"proto2\""
-] @string.special.symbol
+(syntax
+  version: (string) @string.special.symbol)
 
 (escape_sequence) @string.escape
 

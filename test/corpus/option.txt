@@ -16,7 +16,8 @@ option int_float_lit = 1.2345;
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (option
     (identifier)
     (constant
@@ -101,7 +102,8 @@ option (another).thing.(.foo.bar.Thing.Nested.one) = "one";
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (option
     (full_ident
       (identifier)

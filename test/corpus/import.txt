@@ -9,7 +9,8 @@ import "foo.proto";
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (import
     (string)))
 
@@ -24,7 +25,8 @@ import weak "foo.proto";
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (import
     (string)))
 
@@ -39,7 +41,8 @@ import public "foo.proto";
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (import
     (string)))
 
@@ -71,7 +74,8 @@ import public "foo\".proto";
 --------------------------------------------------------------------------------
 
 (source_file
-  (syntax)
+  (syntax
+    (string))
   (import
     (string
       (escape_sequence)))

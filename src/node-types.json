@@ -857,7 +857,18 @@
   {
     "type": "syntax",
     "named": true,
-    "fields": {}
+    "fields": {
+      "version": {
+        "multiple": false,
+        "required": true,
+        "types": [
+          {
+            "type": "string",
+            "named": true
+          }
+        ]
+      }
+    }
   },
   {
     "type": "type",
@@ -876,14 +887,6 @@
   },
   {
     "type": "\"",
-    "named": false
-  },
-  {
-    "type": "\"proto2\"",
-    "named": false
-  },
-  {
-    "type": "\"proto3\"",
     "named": false
   },
   {
