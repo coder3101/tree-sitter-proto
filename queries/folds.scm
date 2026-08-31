@@ -6,6 +6,7 @@
   (service)
   (oneof)
   (rpc)
+  (block_lit)
 ] @fold
 
 (import)+ @fold

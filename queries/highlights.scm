@@ -140,6 +140,10 @@
 
 (string) @string
 
+; reserved names are their own node type rather than (string), so they need
+; their own rule - without it they are the only unhighlighted literal.
+(reserved_identifier) @string
+
 (import
   path: (string) @string.special.path)
 

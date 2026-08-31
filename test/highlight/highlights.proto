@@ -164,3 +164,11 @@ message PunctuationTest {
 //                            ^ number
 //                             ^ punctuation.delimiter
 }
+
+// reserved names are their own node type, not (string)
+message ReservedNameTest {
+  reserved "foo", "bar";
+//^ keyword
+//         ^ string
+//                ^ string
+}
