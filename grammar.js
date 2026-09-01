@@ -170,8 +170,11 @@ module.exports = grammar({
 
     message_name: $ => $.identifier,
 
+    // extend = "extend" messageType "{" {field | group | emptyStatement} "}"
+    // messageType = [ "." ] { ident "." } messageName
     extend: $ => seq(
       'extend',
+      optional('.'),
       $.full_ident,
       $.message_body,
     ),
