@@ -28,7 +28,6 @@ message SampleMessage {
           (field_number
             (int_lit
               (decimal_lit))))
-        (empty_statement)
         (oneof_field
           (type
             (message_or_enum_type
@@ -36,8 +35,7 @@ message SampleMessage {
           (identifier)
           (field_number
             (int_lit
-              (decimal_lit))))
-        (empty_statement)))))
+              (decimal_lit))))))))
 
 ================================================================================
 Oneof with option
@@ -74,8 +72,7 @@ message SampleMessage {
           (identifier)
           (field_number
             (int_lit
-              (decimal_lit))))
-        (empty_statement)))))
+              (decimal_lit))))))))
 
 ================================================================================
 Oneof with a group
@@ -109,7 +106,6 @@ message SampleMessage {
           (field_number
             (int_lit
               (decimal_lit))))
-        (empty_statement)
         (group
           (message_name
             (identifier))
@@ -123,3 +119,35 @@ message SampleMessage {
               (field_number
                 (int_lit
                   (decimal_lit))))))))))
+
+================================================================================
+Oneof with a stray semicolon
+================================================================================
+
+syntax = "proto3";
+
+message SampleMessage {
+  oneof test_oneof {
+    string name = 4;
+    ;
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string))
+  (message
+    (message_name
+      (identifier))
+    (message_body
+      (oneof
+        (identifier)
+        (oneof_field
+          (type)
+          (identifier)
+          (field_number
+            (int_lit
+              (decimal_lit))))
+        (empty_statement)))))

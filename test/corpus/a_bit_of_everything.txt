@@ -1571,14 +1571,12 @@ service AnotherServiceWithNoBindings {
           (field_number
             (int_lit
               (decimal_lit))))
-        (empty_statement)
         (oneof_field
           (type)
           (identifier)
           (field_number
             (int_lit
-              (decimal_lit))))
-        (empty_statement))
+              (decimal_lit)))))
       (map_field
         (key_type)
         (type
