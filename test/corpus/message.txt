@@ -126,3 +126,84 @@ message Outer {
       (reserved
         (reserved_field_names
           (reserved_identifier))))))
+
+================================================================================
+Field types qualified by a keyword-named package
+================================================================================
+
+syntax = "proto2";
+
+message Foo {
+  message.v1.Bar a = 1;
+  optional enum.v1.Baz b = 2;
+  extend.v1.Bar c = 3;
+  oneof choice {
+    option.v1.Bar d = 4;
+  }
+  extend .foo.Bar {
+    optional int32 e = 5;
+  }
+}
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string))
+  (message
+    (message_name
+      (identifier))
+    (message_body
+      (field
+        (type
+          (message_or_enum_type
+            (identifier)
+            (identifier)
+            (identifier)))
+        (identifier)
+        (field_number
+          (int_lit
+            (decimal_lit))))
+      (field
+        (type
+          (message_or_enum_type
+            (identifier)
+            (identifier)
+            (identifier)))
+        (identifier)
+        (field_number
+          (int_lit
+            (decimal_lit))))
+      (field
+        (type
+          (message_or_enum_type
+            (identifier)
+            (identifier)
+            (identifier)))
+        (identifier)
+        (field_number
+          (int_lit
+            (decimal_lit))))
+      (oneof
+        (identifier)
+        (oneof_field
+          (type
+            (message_or_enum_type
+              (identifier)
+              (identifier)
+              (identifier)))
+          (identifier)
+          (field_number
+            (int_lit
+              (decimal_lit)))))
+      (extend
+        (full_ident
+          (identifier)
+          (identifier))
+        (message_body
+          (field
+            (type)
+            (identifier)
+            (field_number
+              (int_lit
+                (decimal_lit)))))))))
