@@ -30,6 +30,10 @@ module.exports = grammar({
 
   extras: $ => [$.comment, /\s/],
 
+  // `extend .foo.Bar {` and the field `extend.foo.Bar f = 1;` share a prefix
+  // up to the token after the type name.
+  conflicts: $ => [[$.extend, $._keyword_identifier]],
+
   rules: {
     // proto = syntax { import | package | option | topLevelDef | emptyStatement }
     // topLevelDef = message | enum | service
@@ -335,12 +339,30 @@ module.exports = grammar({
     // messageType = [ "." ] { ident "." } messageName
     message_or_enum_type: $ => seq(
       optional('.'),
-      repeat(seq(
-        $.identifier,
+      optional(seq(
+        choice($.identifier, $._keyword_identifier),
         '.',
+        repeat(seq($.identifier, '.')),
       )),
       $.identifier,
     ),
+
+    // Keywords that can start a statement in a message or oneof body, and so
+    // lex as keywords there. As the first segment of a qualified type name,
+    // e.g. `message.v1.Foo`, they are ordinary identifiers.
+    _keyword_identifier: $ => alias(choice(
+      'enum',
+      'export',
+      'extend',
+      'extensions',
+      'group',
+      'local',
+      'map',
+      'message',
+      'oneof',
+      'option',
+      'reserved',
+    ), $.identifier),
 
     // fieldNumber = intLit;
     field_number: $ => $.int_lit,

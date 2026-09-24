@@ -172,3 +172,11 @@ message ReservedNameTest {
 //         ^ string
 //                ^ string
 }
+
+// a keyword-named package qualifying a field type is part of the type
+message KeywordPackageTest {
+  message.v1.Foo foo = 1;
+//^ type
+//        ^ type
+//           ^ type
+}
