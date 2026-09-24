@@ -1,0 +1,24 @@
+syntax = "proto3";
+
+package foo.v1;
+//      ^ definition.module
+
+message Request {
+//      ^ definition.class
+  foo.v1.Inner inner = 1;
+//       ^ reference.type
+}
+
+enum Status {
+//   ^ definition.enum
+  STATUS_UNSPECIFIED = 0;
+//^ definition.constant
+}
+
+service FooService {
+//      ^ definition.interface
+  rpc Get(Request) returns (.foo.v1.Response);
+//    ^ definition.method
+//        ^ reference.type
+//                                  ^ reference.type
+}
