@@ -448,10 +448,13 @@ module.exports = grammar({
       optional(':'),
       choice(
         $.constant,
-        array_of($.constant),
+        $.array_lit,
       ),
       optional(choice(',', ';')),
     ),
+
+    // A repeated field's values in an aggregate option value: { f: [1, 2] }
+    array_lit: $ => array_of($.constant),
 
     // An extension name, or an Any type URL: [type.googleapis.com/foo.Bar]
     extension_name: $ => seq(

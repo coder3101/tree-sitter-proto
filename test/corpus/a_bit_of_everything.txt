@@ -800,6 +800,7 @@ service AnotherServiceWithNoBindings {
           (full_ident
             (identifier)
             (identifier)))
+        (array_lit)
         (comment)
         (identifier)
         (constant
@@ -1285,12 +1286,13 @@ service AnotherServiceWithNoBindings {
                 (constant
                   (string))
                 (identifier)
-                (constant
-                  (string))
-                (constant
-                  (string))
-                (constant
-                  (string))))
+                (array_lit
+                  (constant
+                    (string))
+                  (constant
+                    (string))
+                  (constant
+                    (string)))))
             (identifier)
             (constant
               (block_lit
@@ -1440,8 +1442,9 @@ service AnotherServiceWithNoBindings {
                 (constant
                   (string))
                 (identifier)
-                (constant
-                  (string)))))))
+                (array_lit
+                  (constant
+                    (string))))))))
       (field
         (type)
         (identifier)
@@ -2306,22 +2309,23 @@ service AnotherServiceWithNoBindings {
             (constant
               (string))
             (identifier)
-            (constant
-              (block_lit
-                (identifier)
-                (constant
-                  (string))
-                (identifier)
-                (constant
-                  (string))))
-            (constant
-              (block_lit
-                (identifier)
-                (constant
-                  (string))
-                (identifier)
-                (constant
-                  (string))))))))
+            (array_lit
+              (constant
+                (block_lit
+                  (identifier)
+                  (constant
+                    (string))
+                  (identifier)
+                  (constant
+                    (string))))
+              (constant
+                (block_lit
+                  (identifier)
+                  (constant
+                    (string))
+                  (identifier)
+                  (constant
+                    (string)))))))))
     (rpc
       (rpc_name
         (identifier))
