@@ -876,6 +876,10 @@
         {
           "type": "escape_sequence",
           "named": true
+        },
+        {
+          "type": "string_content",
+          "named": true
         }
       ]
     }
@@ -1155,6 +1159,10 @@
   {
     "type": "string",
     "named": false
+  },
+  {
+    "type": "string_content",
+    "named": true
   },
   {
     "type": "syntax",

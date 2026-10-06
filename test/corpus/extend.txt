@@ -12,7 +12,8 @@ extend Foo {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (extend
     (full_ident
       (identifier))
@@ -38,7 +39,8 @@ extend .google.protobuf.FieldOptions {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (extend
     (full_ident
       (identifier)

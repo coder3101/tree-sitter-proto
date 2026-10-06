@@ -8,7 +8,8 @@ edition = "2023";
 
 (source_file
   (edition
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Edition 2024 directive
@@ -20,7 +21,8 @@ edition = "2024";
 
 (source_file
   (edition
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Comments
@@ -37,7 +39,8 @@ edition = "2023"; // And this one
 (source_file
   (comment)
   (edition
-    (string))
+    (string
+      (string_content)))
   (comment)
   (comment))
 

@@ -10,7 +10,8 @@ export message Foo {}
 
 (source_file
   (edition
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))
@@ -28,7 +29,8 @@ local message Foo {}
 
 (source_file
   (edition
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))
@@ -58,7 +60,8 @@ message Outer {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))
@@ -149,7 +152,8 @@ message Foo {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))
