@@ -12,7 +12,8 @@ export enum Foo {
 
 (source_file
   (edition
-    (string))
+    (string
+      (string_content)))
   (enum
     (enum_name
       (identifier))
@@ -36,7 +37,8 @@ local enum Foo {
 
 (source_file
   (edition
-    (string))
+    (string
+      (string_content)))
   (enum
     (enum_name
       (identifier))
@@ -63,7 +65,8 @@ enum EnumAllowingAlias {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (enum
     (enum_name
       (identifier))
@@ -89,4 +92,5 @@ enum EnumAllowingAlias {
           (full_ident
             (identifier))
           (constant
-            (string)))))))
+            (string
+              (string_content))))))))

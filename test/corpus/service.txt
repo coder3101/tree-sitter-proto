@@ -14,7 +14,8 @@ service StreamService {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (service
     (service_name
       (identifier))
@@ -66,7 +67,8 @@ service ABitOfEverythingService {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (service
     (service_name
       (identifier))
@@ -81,16 +83,19 @@ service ABitOfEverythingService {
         (block_lit
           (identifier)
           (constant
-            (string))
+            (string
+              (string_content)))
           (identifier)
           (constant
             (block_lit
               (identifier)
               (constant
-                (string))
+                (string
+                  (string_content)))
               (identifier)
               (constant
-                (string)))))))
+                (string
+                  (string_content))))))))
     (rpc
       (rpc_name
         (identifier))
@@ -107,4 +112,5 @@ service ABitOfEverythingService {
           (block_lit
             (identifier)
             (constant
-              (string))))))))
+              (string
+                (string_content)))))))))
