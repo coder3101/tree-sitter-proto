@@ -10,7 +10,8 @@ option (a) = { test:<foo:"m&m" array:1 array:2 s:<name:"yolo" id:98765>> fff:OK 
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (full_ident
       (identifier))
@@ -21,7 +22,8 @@ option (a) = { test:<foo:"m&m" array:1 array:2 s:<name:"yolo" id:98765>> fff:OK 
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (int_lit
@@ -35,7 +37,8 @@ option (a) = { test:<foo:"m&m" array:1 array:2 s:<name:"yolo" id:98765>> fff:OK 
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (int_lit
@@ -58,7 +61,8 @@ option (c) = { [type.googleapis.com/buf.test.Foo] { y: 2 } };
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (full_ident
       (identifier))
@@ -113,7 +117,8 @@ option (d) = { [foo.bar.baz]: 1, [.foo.bar.qux]: 2 };
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (full_ident
       (identifier))
@@ -152,7 +157,8 @@ option (a) = {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (full_ident
       (identifier))
@@ -164,7 +170,8 @@ option (a) = {
             (int_lit
               (decimal_lit)))
           (constant
-            (string)))
+            (string
+              (string_content))))
         (identifier)
         (array_lit
           (constant

@@ -13,7 +13,8 @@ message Outer {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))
@@ -57,7 +58,8 @@ message Outer {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))
@@ -90,7 +92,8 @@ message Outer {
             (full_ident
               (identifier))
             (constant
-              (string)))))
+              (string
+                (string_content))))))
       (extensions
         (ranges
           (range

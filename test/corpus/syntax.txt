@@ -8,7 +8,8 @@ syntax = "proto3";
 
 (source_file
   (syntax
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Comments
@@ -25,7 +26,8 @@ syntax = "proto3"; // And this one
 (source_file
   (comment)
   (syntax
-    (string))
+    (string
+      (string_content)))
   (comment)
   (comment))
 
@@ -39,7 +41,8 @@ syntax = 'proto3';
 
 (source_file
   (syntax
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Concatenated syntax directive
@@ -51,4 +54,6 @@ syntax = "pro" 'to3';
 
 (source_file
   (syntax
-    (string)))
+    (string
+      (string_content)
+      (string_content))))

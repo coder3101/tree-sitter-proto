@@ -17,11 +17,13 @@ option int_float_lit = 1.2345;
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (identifier)
     (constant
-      (string)))
+      (string
+        (string_content))))
   (option
     (identifier)
     (constant
@@ -70,7 +72,8 @@ option features.(pb.java).utf8_validation = VERIFY;
 
 (source_file
   (edition
-    (string))
+    (string
+      (string_content)))
   (option
     (identifier)
     (full_ident
@@ -103,7 +106,8 @@ option (another).thing.(.foo.bar.Thing.Nested.one) = "one";
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (full_ident
       (identifier)
@@ -123,4 +127,27 @@ option (another).thing.(.foo.bar.Thing.Nested.one) = "one";
       (identifier)
       (identifier))
     (constant
-      (string))))
+      (string
+        (string_content)))))
+
+================================================================================
+Adjacent string literals
+================================================================================
+
+syntax = "proto3";
+
+option foo = "a" 'b\n' "";
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string
+      (string_content)))
+  (option
+    (identifier)
+    (constant
+      (string
+        (string_content)
+        (string_content)
+        (escape_sequence)))))

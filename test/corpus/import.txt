@@ -10,9 +10,11 @@ import "foo.proto";
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (import
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Import weak
@@ -26,9 +28,11 @@ import weak "foo.proto";
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (import
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Import public
@@ -42,9 +46,11 @@ import public "foo.proto";
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (import
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Import option
@@ -58,9 +64,11 @@ import option "foo.proto";
 
 (source_file
   (edition
-    (string))
+    (string
+      (string_content)))
   (import
-    (string)))
+    (string
+      (string_content))))
 
 ================================================================================
 Import with escapes
@@ -75,10 +83,15 @@ import public "foo\".proto";
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (import
     (string
-      (escape_sequence)))
+      (string_content)
+      (escape_sequence)
+      (string_content)))
   (import
     (string
-      (escape_sequence))))
+      (string_content)
+      (escape_sequence)
+      (string_content))))

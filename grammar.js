@@ -576,7 +576,7 @@ module.exports = grammar({
         seq(
           '"',
           repeat(choice(
-            token.immediate(prec(1, /[^"\\]+/)),
+            alias(token.immediate(prec(1, /[^"\\]+/)), $.string_content),
             $.escape_sequence,
           )),
           '"',
@@ -585,7 +585,7 @@ module.exports = grammar({
         seq(
           '\'',
           repeat(choice(
-            token.immediate(prec(1, /[^'\\]+/)),
+            alias(token.immediate(prec(1, /[^'\\]+/)), $.string_content),
             $.escape_sequence,
           )),
           '\'',

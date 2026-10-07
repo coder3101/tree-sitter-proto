@@ -13,7 +13,8 @@ message Project {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (message
     (message_name
       (identifier))

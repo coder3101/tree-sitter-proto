@@ -10,7 +10,8 @@ package foo ;
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (package
     (full_ident
       (identifier))))
@@ -27,7 +28,8 @@ package foo.bar;
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (package
     (full_ident
       (identifier)

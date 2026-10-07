@@ -708,11 +708,13 @@ service AnotherServiceWithNoBindings {
 
 (source_file
   (syntax
-    (string))
+    (string
+      (string_content)))
   (option
     (identifier)
     (constant
-      (string)))
+      (string
+        (string_content))))
   (package
     (full_ident
       (identifier)
@@ -722,29 +724,41 @@ service AnotherServiceWithNoBindings {
       (identifier)
       (identifier)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (import
-    (string))
+    (string
+      (string_content)))
   (option
     (full_ident
       (identifier)
@@ -759,43 +773,52 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))
-            (identifier)
-            (constant
-              (block_lit
-                (identifier)
-                (constant
-                  (string))
-                (identifier)
-                (constant
-                  (string))
-                (identifier)
-                (constant
-                  (string))))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))))
+                  (string
+                    (string_content)))
+                (identifier)
+                (constant
+                  (string
+                    (string_content)))))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
+                (identifier)
+                (constant
+                  (string
+                    (string_content)))))
+            (identifier)
+            (constant
+              (block_lit
+                (identifier)
+                (constant
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
                     (identifier)
                     (constant
-                      (string))))))))
+                      (string
+                        (string_content)))))))))
         (extension_name
           (full_ident
             (identifier)
@@ -807,10 +830,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))
+              (string
+                (string_content)))))
         (identifier)
         (constant
           (full_ident
@@ -825,16 +850,20 @@ service AnotherServiceWithNoBindings {
             (identifier)))
         (identifier)
         (constant
-          (string))
+          (string
+            (string_content)))
         (identifier)
         (constant
-          (string))
+          (string
+            (string_content)))
         (identifier)
         (constant
-          (string))
+          (string
+            (string_content)))
         (identifier)
         (constant
-          (string))
+          (string
+            (string_content)))
         (identifier)
         (constant
           (block_lit
@@ -843,7 +872,8 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -856,7 +886,8 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -870,25 +901,29 @@ service AnotherServiceWithNoBindings {
                         (identifier)))
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
                           (block_lit
                             (identifier)
                             (constant
-                              (string))))))
+                              (string
+                                (string_content)))))))
                     (identifier)
                     (constant
                       (block_lit
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
                           (block_lit
@@ -900,19 +935,22 @@ service AnotherServiceWithNoBindings {
                                   (block_lit
                                     (identifier)
                                     (constant
-                                      (string))
+                                      (string
+                                        (string_content)))
                                     (identifier)
                                     (constant
                                       (block_lit
                                         (identifier)
                                         (constant
-                                          (string))))))
+                                          (string
+                                            (string_content)))))))
                                 (identifier)
                                 (constant
                                   (block_lit
                                     (identifier)
                                     (constant
-                                      (string))
+                                      (string
+                                        (string_content)))
                                     (identifier)
                                     (constant
                                       (block_lit
@@ -925,7 +963,8 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -939,10 +978,12 @@ service AnotherServiceWithNoBindings {
                         (identifier)))
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit
@@ -951,28 +992,34 @@ service AnotherServiceWithNoBindings {
                           (block_lit
                             (identifier)
                             (constant
-                              (string))
+                              (string
+                                (string_content)))
                             (identifier)
                             (constant
-                              (string))))
+                              (string
+                                (string_content)))))
                         (identifier)
                         (constant
                           (block_lit
                             (identifier)
                             (constant
-                              (string))
+                              (string
+                                (string_content)))
                             (identifier)
                             (constant
-                              (string))))
+                              (string
+                                (string_content)))))
                         (identifier)
                         (constant
                           (block_lit
                             (identifier)
                             (constant
-                              (string))
+                              (string
+                                (string_content)))
                             (identifier)
                             (constant
-                              (string))))))))))))
+                              (string
+                                (string_content)))))))))))))
         (identifier)
         (constant
           (block_lit
@@ -981,7 +1028,8 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit))))
@@ -990,7 +1038,8 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit))))))
@@ -1002,22 +1051,26 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
-                      (string))))))
+                      (string
+                        (string_content)))))))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit))))))
@@ -1026,25 +1079,29 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))))))
+                  (string
+                    (string_content)))))))
         (identifier)
         (constant
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -1060,13 +1117,15 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -1075,45 +1134,54 @@ service AnotherServiceWithNoBindings {
                       (block_lit
                         (identifier)
                         (constant
-                          (string))))))))))
+                          (string
+                            (string_content)))))))))))
         (identifier)
         (constant
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
                           (string
                             (escape_sequence)
+                            (string_content)
                             (escape_sequence)))
                         (identifier)
                         (constant
-                          (string))))))
+                          (string
+                            (string_content)))))))
                 (identifier)
                 (constant
                   (block_lit
@@ -1122,25 +1190,29 @@ service AnotherServiceWithNoBindings {
                       (block_lit
                         (identifier)
                         (constant
-                          (string))))))))))
+                          (string
+                            (string_content)))))))))))
         (identifier)
         (constant
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))))))
+                  (string
+                    (string_content)))))))
         (identifier)
         (constant
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
@@ -1152,7 +1224,8 @@ service AnotherServiceWithNoBindings {
                       (block_lit
                         (identifier)
                         (constant
-                          (string))))
+                          (string
+                            (string_content)))))
                     (identifier)
                     (constant
                       (block_lit
@@ -1182,20 +1255,25 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (string
                     (escape_sequence)
+                    (string_content)
                     (escape_sequence))))))))
       (field
         (type
@@ -1227,16 +1305,20 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (field
         (type)
         (identifier)
@@ -1255,13 +1337,16 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))))
+                  (string
+                    (string_content))))))))))
   (comment)
   (message
     (message_name
@@ -1281,34 +1366,46 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (array_lit
                   (constant
-                    (string))
+                    (string
+                      (string_content)))
                   (constant
-                    (string))
+                    (string
+                      (string_content)))
                   (constant
-                    (string)))))
+                    (string
+                      (string_content))))))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))))
+                  (string
+                    (string_content)))))
             (identifier)
             (constant
               (string
+                (string_content)
                 (escape_sequence)
+                (string_content)
                 (escape_sequence)
+                (string_content)
                 (escape_sequence)
-                (escape_sequence))))))
+                (string_content)
+                (escape_sequence)
+                (string_content))))))
       (comment)
       (message
         (message_name
@@ -1326,10 +1423,15 @@ service AnotherServiceWithNoBindings {
                 (identifier)
                 (constant
                   (string
+                    (string_content)
                     (escape_sequence)
+                    (string_content)
                     (escape_sequence)
+                    (string_content)
                     (escape_sequence)
-                    (escape_sequence))))))
+                    (string_content)
+                    (escape_sequence)
+                    (string_content))))))
           (comment)
           (field
             (type)
@@ -1379,7 +1481,8 @@ service AnotherServiceWithNoBindings {
                   (block_lit
                     (identifier)
                     (constant
-                      (string)))))))))
+                      (string
+                        (string_content))))))))))
       (field
         (type
           (message_or_enum_type
@@ -1406,7 +1509,8 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (int_lit
@@ -1437,14 +1541,17 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (array_lit
                   (constant
-                    (string))))))))
+                    (string
+                      (string_content)))))))))
       (field
         (type)
         (identifier)
@@ -1651,10 +1758,12 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (comment)
       (field
         (type
@@ -1676,10 +1785,12 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (comment)
       (field
         (type)
@@ -1699,10 +1810,12 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (comment)
       (field
         (type
@@ -1724,10 +1837,12 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (comment)
       (field
         (type
@@ -1749,10 +1864,12 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (field
         (type)
         (identifier)
@@ -1828,10 +1945,15 @@ service AnotherServiceWithNoBindings {
             (identifier)
             (constant
               (string
+                (string_content)
                 (escape_sequence)
+                (string_content)
                 (escape_sequence)
+                (string_content)
                 (escape_sequence)
-                (escape_sequence))))))
+                (string_content)
+                (escape_sequence)
+                (string_content))))))
       (comment)
       (field
         (type)
@@ -2150,16 +2272,19 @@ service AnotherServiceWithNoBindings {
         (block_lit
           (identifier)
           (constant
-            (string))
+            (string
+              (string_content)))
           (identifier)
           (constant
             (block_lit
               (identifier)
               (constant
-                (string))
+                (string
+                  (string_content)))
               (identifier)
               (constant
-                (string)))))))
+                (string
+                  (string_content))))))))
     (comment)
     (comment)
     (comment)
@@ -2179,7 +2304,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2196,10 +2322,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (comment)
     (rpc
       (rpc_name
@@ -2217,10 +2345,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2237,10 +2367,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2263,29 +2395,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
-    (rpc
-      (rpc_name
-        (identifier))
-      (message_or_enum_type
-        (identifier))
-      (message_or_enum_type
-        (identifier)
-        (identifier)
-        (identifier))
-      (option
-        (full_ident
-          (identifier)
-          (identifier)
-          (identifier))
-        (constant
-          (block_lit
-            (identifier)
-            (constant
-              (string))
-            (identifier)
-            (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2304,28 +2415,58 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))))))
+    (rpc
+      (rpc_name
+        (identifier))
+      (message_or_enum_type
+        (identifier))
+      (message_or_enum_type
+        (identifier)
+        (identifier)
+        (identifier))
+      (option
+        (full_ident
+          (identifier)
+          (identifier)
+          (identifier))
+        (constant
+          (block_lit
+            (identifier)
+            (constant
+              (string
+                (string_content)))
+            (identifier)
+            (constant
+              (string
+                (string_content)))
             (identifier)
             (array_lit
               (constant
                 (block_lit
                   (identifier)
                   (constant
-                    (string))
+                    (string
+                      (string_content)))
                   (identifier)
                   (constant
-                    (string))))
+                    (string
+                      (string_content)))))
               (constant
                 (block_lit
                   (identifier)
                   (constant
-                    (string))
+                    (string
+                      (string_content)))
                   (identifier)
                   (constant
-                    (string)))))))))
+                    (string
+                      (string_content))))))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2350,7 +2491,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string)))))
+              (string
+                (string_content))))))
       (option
         (full_ident
           (identifier)
@@ -2368,7 +2510,8 @@ service AnotherServiceWithNoBindings {
                   (block_lit
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit))))
@@ -2377,22 +2520,26 @@ service AnotherServiceWithNoBindings {
                   (block_lit
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
-                          (string))))))))
+                          (string
+                            (string_content)))))))))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -2418,7 +2565,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string)))))
+              (string
+                (string_content))))))
       (option
         (full_ident
           (identifier)
@@ -2438,10 +2586,12 @@ service AnotherServiceWithNoBindings {
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))))
+                  (string
+                    (string_content)))))
             (identifier)
             (constant
               (block_lit))))))
@@ -2461,7 +2611,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (comment)
     (comment)
     (comment)
@@ -2497,22 +2648,26 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
-                  (string))))
+                  (string
+                    (string_content)))))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string)))))))
+                  (string
+                    (string_content))))))))
       (option
         (full_ident
           (identifier)
@@ -2524,28 +2679,34 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))
-            (identifier)
-            (constant
-              (block_lit
-                (identifier)
-                (constant
-                  (string))
-                (identifier)
-                (constant
-                  (string))))
+              (string
+                (string_content)))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
+                (identifier)
+                (constant
+                  (string
+                    (string_content)))))
+            (identifier)
+            (constant
+              (block_lit
+                (identifier)
+                (constant
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
@@ -2554,28 +2715,33 @@ service AnotherServiceWithNoBindings {
                       (block_lit
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
-                          (string))))))))
+                          (string
+                            (string_content)))))))))
             (identifier)
             (constant
               (block_lit
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit
                         (identifier)
                         (constant
-                          (string))
+                          (string
+                            (string_content)))
                         (identifier)
                         (constant
                           (block_lit
@@ -2589,13 +2755,15 @@ service AnotherServiceWithNoBindings {
                 (comment)
                 (identifier)
                 (constant
-                  (string))
+                  (string
+                    (string_content)))
                 (identifier)
                 (constant
                   (block_lit
                     (identifier)
                     (constant
-                      (string))
+                      (string
+                        (string_content)))
                     (identifier)
                     (constant
                       (block_lit
@@ -2622,10 +2790,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2657,7 +2827,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2678,7 +2849,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2697,10 +2869,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2719,10 +2893,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2739,7 +2915,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2756,7 +2933,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2773,10 +2951,12 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))
+              (string
+                (string_content)))
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2797,7 +2977,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string)))))
+              (string
+                (string_content))))))
       (option
         (full_ident
           (identifier)
@@ -2809,27 +2990,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
-    (rpc
-      (rpc_name
-        (identifier))
-      (message_or_enum_type
-        (identifier)
-        (identifier))
-      (message_or_enum_type
-        (identifier)
-        (identifier)
-        (identifier))
-      (option
-        (full_ident
-          (identifier)
-          (identifier)
-          (identifier))
-        (constant
-          (block_lit
-            (identifier)
-            (constant
-              (string))))))
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2849,7 +3011,29 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string))))))
+              (string
+                (string_content)))))))
+    (rpc
+      (rpc_name
+        (identifier))
+      (message_or_enum_type
+        (identifier)
+        (identifier))
+      (message_or_enum_type
+        (identifier)
+        (identifier)
+        (identifier))
+      (option
+        (full_ident
+          (identifier)
+          (identifier)
+          (identifier))
+        (constant
+          (block_lit
+            (identifier)
+            (constant
+              (string
+                (string_content)))))))
     (rpc
       (rpc_name
         (identifier))
@@ -2868,7 +3052,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string)))))))
+              (string
+                (string_content))))))))
   (comment)
   (service
     (service_name
@@ -2893,7 +3078,8 @@ service AnotherServiceWithNoBindings {
           (block_lit
             (identifier)
             (constant
-              (string)))))))
+              (string
+                (string_content))))))))
   (service
     (service_name
       (identifier))
