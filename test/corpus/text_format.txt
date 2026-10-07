@@ -140,3 +140,51 @@ option (d) = { [foo.bar.baz]: 1, [.foo.bar.qux]: 2 };
         (constant
           (int_lit
             (decimal_lit)))))))
+
+================================================================================
+Repeated field values
+================================================================================
+
+syntax = "proto3";
+
+option (a) = {
+  scalars: [1, "two"]
+  messages: [{x: 1}, <y: 2>]
+  none: []
+};
+
+--------------------------------------------------------------------------------
+
+(source_file
+  (syntax
+    (string
+      (string_content)))
+  (option
+    (full_ident
+      (identifier))
+    (constant
+      (block_lit
+        (identifier)
+        (array_lit
+          (constant
+            (int_lit
+              (decimal_lit)))
+          (constant
+            (string
+              (string_content))))
+        (identifier)
+        (array_lit
+          (constant
+            (block_lit
+              (identifier)
+              (constant
+                (int_lit
+                  (decimal_lit)))))
+          (constant
+            (block_lit
+              (identifier)
+              (constant
+                (int_lit
+                  (decimal_lit))))))
+        (identifier)
+        (array_lit)))))

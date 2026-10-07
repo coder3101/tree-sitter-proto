@@ -823,6 +823,7 @@ service AnotherServiceWithNoBindings {
           (full_ident
             (identifier)
             (identifier)))
+        (array_lit)
         (comment)
         (identifier)
         (constant
@@ -1372,15 +1373,16 @@ service AnotherServiceWithNoBindings {
                   (string
                     (string_content)))
                 (identifier)
-                (constant
-                  (string
-                    (string_content)))
-                (constant
-                  (string
-                    (string_content)))
-                (constant
-                  (string
-                    (string_content)))))
+                (array_lit
+                  (constant
+                    (string
+                      (string_content)))
+                  (constant
+                    (string
+                      (string_content)))
+                  (constant
+                    (string
+                      (string_content))))))
             (identifier)
             (constant
               (block_lit
@@ -1546,9 +1548,10 @@ service AnotherServiceWithNoBindings {
                   (string
                     (string_content)))
                 (identifier)
-                (constant
-                  (string
-                    (string_content))))))))
+                (array_lit
+                  (constant
+                    (string
+                      (string_content)))))))))
       (field
         (type)
         (identifier)
@@ -2443,26 +2446,27 @@ service AnotherServiceWithNoBindings {
               (string
                 (string_content)))
             (identifier)
-            (constant
-              (block_lit
-                (identifier)
-                (constant
-                  (string
-                    (string_content)))
-                (identifier)
-                (constant
-                  (string
-                    (string_content)))))
-            (constant
-              (block_lit
-                (identifier)
-                (constant
-                  (string
-                    (string_content)))
-                (identifier)
-                (constant
-                  (string
-                    (string_content)))))))))
+            (array_lit
+              (constant
+                (block_lit
+                  (identifier)
+                  (constant
+                    (string
+                      (string_content)))
+                  (identifier)
+                  (constant
+                    (string
+                      (string_content)))))
+              (constant
+                (block_lit
+                  (identifier)
+                  (constant
+                    (string
+                      (string_content)))
+                  (identifier)
+                  (constant
+                    (string
+                      (string_content))))))))))
     (rpc
       (rpc_name
         (identifier))
