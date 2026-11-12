@@ -34,12 +34,14 @@ pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_proto
 /// [`node-types.json`]: https://tree-sitter.github.io/tree-sitter/using-parsers#static-node-types
 pub const NODE_TYPES: &str = include_str!("../../src/node-types.json");
 
-// NOTE: uncomment these to include any queries that this grammar contains:
+/// The syntax highlighting query for this grammar.
+pub const HIGHLIGHTS_QUERY: &str = include_str!("../../queries/highlights.scm");
 
-// pub const HIGHLIGHTS_QUERY: &str = include_str!("../../queries/highlights.scm");
-// pub const INJECTIONS_QUERY: &str = include_str!("../../queries/injections.scm");
-// pub const LOCALS_QUERY: &str = include_str!("../../queries/locals.scm");
-// pub const TAGS_QUERY: &str = include_str!("../../queries/tags.scm");
+/// The language injection query for this grammar.
+pub const INJECTIONS_QUERY: &str = include_str!("../../queries/injections.scm");
+
+/// The symbol tagging query for this grammar.
+pub const TAGS_QUERY: &str = include_str!("../../queries/tags.scm");
 
 #[cfg(test)]
 mod tests {
@@ -49,5 +51,17 @@ mod tests {
         parser
             .set_language(&super::LANGUAGE.into())
             .expect("Error loading Proto parser");
+    }
+
+    #[test]
+    fn test_queries_are_valid() {
+        let language = super::LANGUAGE.into();
+        for query in [
+            super::HIGHLIGHTS_QUERY,
+            super::INJECTIONS_QUERY,
+            super::TAGS_QUERY,
+        ] {
+            tree_sitter::Query::new(&language, query).expect("Invalid query");
+        }
     }
 }
