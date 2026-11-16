@@ -576,19 +576,19 @@ module.exports = grammar({
         seq(
           '"',
           repeat(choice(
-            alias(token.immediate(prec(1, /[^"\\]+/)), $.string_content),
+            alias(token.immediate(prec(1, /[^"\\\n]+/)), $.string_content),
             $.escape_sequence,
           )),
-          '"',
+          token.immediate('"'),
         ),
 
         seq(
           '\'',
           repeat(choice(
-            alias(token.immediate(prec(1, /[^'\\]+/)), $.string_content),
+            alias(token.immediate(prec(1, /[^'\\\n]+/)), $.string_content),
             $.escape_sequence,
           )),
-          '\'',
+          token.immediate('\''),
         ),
       ),
     ),
@@ -596,7 +596,7 @@ module.exports = grammar({
     escape_sequence: $ => token.immediate(seq(
       '\\',
       choice(
-        /[^xuU]/,
+        /[^xuU\n]/,
         /\d{2,3}/,
         /x[0-9a-fA-F]{2,}/,
         /u[0-9a-fA-F]{4}/,
