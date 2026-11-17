@@ -2479,7 +2479,7 @@
                           "value": 1,
                           "content": {
                             "type": "PATTERN",
-                            "value": "[^\"\\\\]+"
+                            "value": "[^\"\\\\\\n]+"
                           }
                         }
                       },
@@ -2494,8 +2494,11 @@
                 }
               },
               {
-                "type": "STRING",
-                "value": "\""
+                "type": "IMMEDIATE_TOKEN",
+                "content": {
+                  "type": "STRING",
+                  "value": "\""
+                }
               }
             ]
           },
@@ -2520,7 +2523,7 @@
                           "value": 1,
                           "content": {
                             "type": "PATTERN",
-                            "value": "[^'\\\\]+"
+                            "value": "[^'\\\\\\n]+"
                           }
                         }
                       },
@@ -2535,8 +2538,11 @@
                 }
               },
               {
-                "type": "STRING",
-                "value": "'"
+                "type": "IMMEDIATE_TOKEN",
+                "content": {
+                  "type": "STRING",
+                  "value": "'"
+                }
               }
             ]
           }
@@ -2557,7 +2563,7 @@
             "members": [
               {
                 "type": "PATTERN",
-                "value": "[^xuU]"
+                "value": "[^xuU\\n]"
               },
               {
                 "type": "PATTERN",
